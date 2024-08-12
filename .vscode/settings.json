@@ -1,0 +1,28 @@
+{
+  "cmake.configureOnOpen": false,  
+  "files.associations": {
+    "lcd.h": "c",
+    "hw_def.h": "c",
+    "hw.h": "c",
+    "bsp.h": "c",
+    "rp2040.h": "c",
+    "cmd.h": "c",
+    "uart.h": "c",
+    "tusb.h": "c",
+    "driver.h": "c",
+    "ap_def.h": "c",
+    "array": "c",
+    "ranges": "c",
+    "span": "c",
+    "vector": "c",
+    "xstring": "c",
+    "xutility": "c",
+    "string": "c",
+    "string_view": "c",
+    "cli.h": "c",
+    "boot.h": "c",
+    "def.h": "c",
+    "cmd_task.h": "c",
+    "cmd_uart.h": "c"
+  }
+}

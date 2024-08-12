@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Pico Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "${command:cmake.launchTargetPath}",
+            // "executable": "${workspaceRoot}/build/src/rp2040_freertos.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            // "rtos": "FreeRTOS",
+            // This may need to be arm-none-eabi-gdb depending on your system
+            "gdbPath" : "arm-none-eabi-gdb",
+            "device": "RP2040",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",// rp2040 picoprobe
+                "target/rp2040.cfg"
+            ],            
+            "svdFile": "${env:PICO_SDK_LIB_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "runToMain": true,
+            // Work around for stopping at main on restart
+            "postRestartCommands": [
+                "break main",
+                "continue"
+            ],
+            "searchDir": [
+                "C:/VSARM/openocd/tcl"
+                // "C:/VSARM/openocd_v0_3_5/scripts"
+            ],
+        }
+    ]
+}
